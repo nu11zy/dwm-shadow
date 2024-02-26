@@ -7,8 +7,8 @@ static const int swallowfloating         = 0;   /* 1 means swallow floating wind
 static const int showbar                 = 1;   /* 0 means no bar */
 static const int topbar                  = 1;   /* 0 means bottom bar */
 /* Status is to be shown on: -1 (all monitors), 0 (a specific monitor by index), 'A' (active monitor) */
-static const int statusmon               = 'A';
-static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const int statusmon               = '-1';
+static const unsigned int systrayspacing = 1;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
 
 
@@ -151,7 +151,6 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "UTILITY", .isfloating = 1)
 	RULE(.wintype = WTYPE "TOOLBAR", .isfloating = 1)
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
-	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "Firefox", .tags = 1 << 7)
 };
 
