@@ -8,7 +8,7 @@ static const int showbar                 = 1;   /* 0 means no bar */
 static const int topbar                  = 1;   /* 0 means bottom bar */
 /* Status is to be shown on: -1 (all monitors), 0 (a specific monitor by index), 'A' (active monitor) */
 static const int statusmon               = 'A';
-static const unsigned int systrayspacing = 1;   /* systray spacing */
+static const unsigned int systrayspacing = 0;   /* systray spacing */
 static const int showsystray             = 1;   /* 0 means no systray */
 
 
@@ -83,6 +83,8 @@ static char *colors[][ColCount] = {
 
 static const char *const autostart[] = {
 	"alacritty", NULL,
+	"bash", "-c", "$HOME/.config/dwm/statusbar.sh", NULL,
+	"bash", "-c", "$HOME/.config/dwm/autostart.sh", NULL,
 	NULL /* terminate */
 };
 
